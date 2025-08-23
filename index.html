@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhammed Anvar Sadiq — Project Management Portfolio</title>
+  <meta name="description" content="Single-page portfolio of Muhammed Anvar Sadiq C — Assistant Project Manager, aspiring Project Manager. B.Com (Computer Application)." />
+  <meta name="author" content="Muhammed Anvar Sadiq C" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🗂️</text></svg>">
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --panel: #111318;
+      --text: #e6e8ef;
+      --muted:#a6adbb;
+      --brand:#5b8cff;
+      --brand-2:#66e0a3;
+      --ring: rgba(91,140,255,.35);
+      --card: #0f1117;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f7f8fc; --panel:#ffffff; --text:#0f172a; --muted:#475569; --card:#ffffff; --shadow:0 10px 20px rgba(2,6,23,.08);
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background:linear-gradient(180deg,var(--bg),#0b0c10) fixed; color:var(--text)}
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1000px; margin:0 auto; padding:24px}
+    header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:color-mix(in oklab,var(--bg) 85%, transparent); border-bottom:1px solid color-mix(in oklab,var(--muted) 25%, transparent); z-index:5}
+    header .bar{display:flex; align-items:center; gap:16px; padding:12px 24px}
+    nav{margin-left:auto; display:flex; gap:16px; flex-wrap:wrap}
+    nav a{padding:8px 12px; border-radius:999px; background:color-mix(in oklab, var(--panel) 70%, transparent); border:1px solid color-mix(in oklab, var(--muted) 20%, transparent)}
+
+    .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center; padding:40px 24px}
+    .card{background:var(--card); border:1px solid color-mix(in oklab,var(--muted) 18%, transparent); border-radius:20px; box-shadow:var(--shadow)}
+    .p-24{padding:24px}
+    .p-32{padding:32px}
+    .muted{color:var(--muted)}
+    .badges{display:flex; gap:10px; flex-wrap:wrap}
+    .badge{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; border:1px solid color-mix(in oklab,var(--muted) 25%, transparent); background:color-mix(in oklab,var(--panel) 70%, transparent); font-size:14px}
+
+    .grid{display:grid; gap:24px}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:860px){ .hero{grid-template-columns:1fr} .grid-2{grid-template-columns:1fr} }
+
+    h1{font-size:clamp(28px,5vw,44px); margin:0}
+    h2{font-size:clamp(18px,3.5vw,24px); margin:0 0 6px}
+    h3{font-size:18px; margin:0 0 6px}
+    section{scroll-margin-top:90px}
+
+    .kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+    .kpi{padding:16px; border-radius:16px; background:linear-gradient(135deg, color-mix(in oklab,var(--brand) 12%, var(--panel)), color-mix(in oklab,var(--panel) 92%, var(--brand-2))); border:1px solid color-mix(in oklab,var(--muted) 25%, transparent)}
+    .kpi strong{font-size:20px}
+
+    /* timeline */
+    .timeline{position:relative; padding-left:22px}
+    .timeline:before{content:""; position:absolute; left:6px; top:0; bottom:0; width:2px; background:color-mix(in oklab,var(--muted) 30%, transparent)}
+    .tl-item{position:relative; padding:14px 14px 14px 18px; margin-bottom:8px; border-radius:14px; border:1px solid color-mix(in oklab,var(--muted) 18%, transparent); background:var(--panel)}
+    .tl-item:before{content:""; position:absolute; left:-12px; top:18px; width:12px; height:12px; border-radius:50%; background:var(--brand); outline:3px solid var(--ring)}
+    .role{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap}
+
+    .footer{padding:40px 24px; text-align:center; color:var(--muted)}
+    .cta{display:inline-flex; gap:10px; align-items:center; padding:10px 14px; border-radius:12px; background:var(--brand); color:white; border:none; box-shadow:var(--shadow)}
+    .cta.secondary{background:transparent; color:var(--brand); border:1px solid var(--brand)}
+    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+  </style>
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Muhammed Anvar Sadiq C",
+    "jobTitle":"Assistant Project Manager",
+    "address": {"@type":"PostalAddress","addressLocality":"Mannarkad","addressRegion":"Kerala","postalCode":"678593","addressCountry":"IN"},
+    "email":"mailto:anvarmkd85@gmail.com",
+    "telephone":"+91 7902392096",
+    "url":"https://your-username.github.io/",
+    "sameAs":["https://www.linkedin.com/in/muhammed-anvar-sadiq"]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="bar container">
+      <strong aria-label="Name">M. A. Sadiq</strong>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#languages">Languages</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="hero">
+      <div class="card p-32">
+        <h1>Muhammed Anvar Sadiq C</h1>
+        <p class="muted">Assistant Project Manager at Obraz Pvt. Ltd. • Aspiring Project Manager in tech. B.Com (Computer Application).</p>
+        <div class="badges" aria-label="Highlights">
+          <span class="badge">Office Suite Proficiency</span>
+          <span class="badge">Project Tech Aware</span>
+          <span class="badge">Analytical & Collaborative</span>
+          <span class="badge">Eager Learner</span>
+        </div>
+        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap">
+          <a class="cta" href="#contact">Get in touch<span aria-hidden>→</span></a>
+          <a class="cta secondary" href="resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
+      <aside class="card p-24" aria-labelledby="quick-stats">
+        <h2 id="quick-stats">At a glance</h2>
+        <div class="kpis" role="list">
+          <div class="kpi" role="listitem"><strong>2025</strong><div class="muted">Assistant PM (Present)</div></div>
+          <div class="kpi" role="listitem"><strong>2024</strong><div class="muted">B.Com (CA)</div></div>
+          <div class="kpi" role="listitem"><strong>3+</strong><div class="muted">Roles across QA & Data</div></div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="experience" class="grid">
+      <h2>Experience</h2>
+      <div class="timeline" aria-label="Work experience timeline">
+        <article class="tl-item">
+          <div class="role"><h3>Assistant Project Manager</h3><span class="muted">May 2025 – Present · Obraz Pvt. Ltd · Mannarkad, Kerala</span></div>
+          <ul>
+            <li>Planned and coordinated project phases to ensure timely completion of deliverables.</li>
+            <li>Used advanced Excel to track milestones, budgets, and resource allocation.</li>
+            <li>Collaborated with cross‑functional teams to maintain alignment with goals and stakeholders.</li>
+          </ul>
+        </article>
+        <article class="tl-item">
+          <div class="role"><h3>Junior Executive – Quality Assurance Analyst</h3><span class="muted">Jan 2025 – Apr 2025 · Obraz Pvt. Ltd</span></div>
+          <ul>
+            <li>Conducted QA checks to validate AI‑generated annotations and uplift model accuracy.</li>
+            <li>Partnered with QC to refine guidelines and improve workflow efficiency.</li>
+          </ul>
+        </article>
+        <article class="tl-item">
+          <div class="role"><h3>Data Annotation Specialist</h3><span class="muted">Oct 2024 – Dec 2024 · Remotasks (Remote)</span></div>
+          <ul>
+            <li>Annotated datasets for AI training across image recognition and autonomous systems.</li>
+            <li>Managed and reviewed projects to ensure high‑quality, consistent labeling.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="grid">
+      <h2>Education</h2>
+      <div class="card p-24">
+        <div class="role"><strong>Bachelor of Commerce (Computer Application)</strong><span class="muted">University of Calicut · Aug 2021 – Apr 2024</span></div>
+      </div>
+      <div class="grid grid-2">
+        <div class="card p-24">
+          <div class="role"><strong>Higher Secondary (Commerce – Politics)</strong><span class="muted">Kerala Board of Higher Education · Jun 2019 – Mar 2021</span></div>
+        </div>
+        <div class="card p-24">
+          <div class="role"><strong>SSLC</strong><span class="muted">Kerala Board of Higher Education · Mar 2019</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="languages" class="grid">
+      <h2>Languages</h2>
+      <div class="grid grid-2">
+        <div class="card p-24">
+          <strong>English</strong>
+          <div class="muted">Read · Write · Speak</div>
+        </div>
+        <div class="card p-24">
+          <strong>German</strong>
+          <div class="muted">A2</div>
+        </div>
+        <div class="card p-24">
+          <strong>Hindi</strong>
+          <div class="muted">Read · Write · Speak</div>
+        </div>
+        <div class="card p-24">
+          <strong>Urdu</strong>
+          <div class="muted">Read · Write</div>
+        </div>
+        <div class="card p-24">
+          <strong>Arabic</strong>
+          <div class="muted">Read · Write</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="grid">
+      <h2>Certification</h2>
+      <div class="card p-24">
+        Voice of Stakeholder (VOS) Training — Young Innovators Program 6.0, K-DISC.
+      </div>
+    </section>
+
+    <section id="contact" class="grid">
+      <h2>Contact</h2>
+      <div class="card p-24">
+        <ul style="list-style:none; padding-left:0; margin:0">
+          <li><strong>Phone:</strong> <a href="tel:+917902392096">+91 7902392096</a></li>
+          <li><strong>Email:</strong> <a href="mailto:anvarmkd85@gmail.com">anvarmkd85@gmail.com</a></li>
+          <li><strong>Location:</strong> Mannarkad 678593, Palakkad, Kerala, India</li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/muhammed-anvar-sadiq" target="_blank" rel="noopener">/in/muhammed-anvar-sadiq</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© <span id="y"></span> Muhammed Anvar Sadiq C · Built for GitHub Pages</small>
+  </footer>
+
+  <script>
+    // update year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- HOW TO DEPLOY (remove this comment before publishing)
+    1) Rename this file to index.html
+    2) Create a repo named your-username.github.io and push index.html
+    3) Replace href in JSON-LD url with your site URL
+    4) Replace the Download Resume link with your hosted resume file name
+  -->
+</body>
+</html>
