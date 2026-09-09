@@ -64,6 +64,19 @@
     @media (max-width:860px){ .hero{grid-template-columns:1fr} .grid-2{grid-template-columns:1fr} }
 
     h1{font-size:clamp(28px,5vw,44px); margin:0}
+
+    h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+h1 img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
     h2{font-size:clamp(18px,3.5vw,24px); margin:0 0 6px}
     h3{font-size:18px; margin:0 0 6px}
     section{scroll-margin-top:90px}
@@ -116,7 +129,7 @@
   <main class="container">
     <section id="about" class="hero">
       <div class="card p-32">
-        <h1>Muhammed Anvar Sadiq C</h1>
+        <h1><img src="pic.jpg" alt="Profile picture"> Muhammed Anvar Sadiq C</h1>
         <p class="muted">Quality Assurance Lead at Obraz Pvt. Ltd. • Aspiring Project Manager in tech. B.Com (Computer Application).</p>
         <div class="badges" aria-label="Highlights">
           <span class="badge">ESG & Sustainability</span>
