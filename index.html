@@ -102,13 +102,28 @@
     .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
     .lightbox.show{display:flex}.lightbox img{max-width:95vw;max-height:90vh;border-radius:16px}
     .close{position:absolute;top:18px;right:22px;font-size:30px;color:white;cursor:pointer}
+
+    /* Tools & Technologies */
+    .tools-section{position:relative;overflow:hidden}
+    .tools-section::before{content:"";position:absolute;width:320px;height:320px;right:-140px;top:40px;border-radius:50%;background:rgba(102,224,163,.07);filter:blur(10px);pointer-events:none}
+    .tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .tool-card{position:relative;min-height:190px;padding:25px;border-radius:22px;border:1px solid rgba(255,255,255,.10);background:linear-gradient(145deg,rgba(20,43,36,.90),rgba(10,24,21,.76));box-shadow:0 12px 35px rgba(0,0,0,.16);overflow:hidden;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+    .tool-card::after{content:"";position:absolute;width:110px;height:110px;right:-45px;bottom:-50px;border-radius:50%;background:rgba(102,224,163,.10);transition:transform .35s ease}
+    .tool-card:hover{transform:translateY(-7px);border-color:rgba(102,224,163,.38);box-shadow:0 20px 45px rgba(0,0,0,.26)}
+    .tool-card:hover::after{transform:scale(1.6)}
+    .tool-icon{width:54px;height:54px;display:flex;align-items:center;justify-content:center;border-radius:16px;margin-bottom:20px;font-size:25px;font-weight:800;color:var(--brand);background:rgba(102,224,163,.09);border:1px solid rgba(102,224,163,.18)}
+    .tool-card h3{margin:0 0 7px;font-size:19px}
+    .tool-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .tool-number{position:absolute;top:20px;right:21px;font-size:12px;font-weight:800;color:rgba(255,255,255,.25);letter-spacing:1px}
+    .tool-badge{display:inline-block;margin-top:16px;padding:5px 9px;border-radius:999px;font-size:11px;color:#d9e7e1;background:rgba(255,255,255,.045);border:1px solid var(--line)}
+
     @media(max-width:850px){.hero{grid-template-columns:1fr;text-align:center}.hero p{margin-left:auto;margin-right:auto}
-      .actions,.chips{justify-content:center}.profile-wrap{order:-1}.grid3{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}
+      .actions,.chips{justify-content:center}.profile-wrap{order:-1}.grid3{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.tools-grid{grid-template-columns:repeat(2,1fr)}
       nav{display:none}.menu{display:block}.bar.open nav{display:flex;position:absolute;left:0;right:0;top:72px;padding:10px 20px;
       background:#091613;border-bottom:1px solid var(--line);flex-direction:column}.bar.open nav a{padding:12px}}
     @media(max-width:600px){.container{padding:0 16px}.hero{padding:45px 0;min-height:auto}h1{font-size:45px;letter-spacing:-2px}
       section{padding:52px 0}.card{padding:19px;border-radius:19px}.stats{grid-template-columns:1fr}.award{grid-template-columns:1fr;text-align:center}
-      .award img{margin:auto}.contact{grid-template-columns:1fr}.floating{right:-5px}.btn{width:100%}.actions{display:grid}}
+      .award img{margin:auto}.contact{grid-template-columns:1fr}.tools-grid{grid-template-columns:1fr}.floating{right:-5px}.btn{width:100%}.actions{display:grid}}
   </style>
 </head>
 
@@ -118,7 +133,7 @@
     <a class="logo" href="#top">Anvar Sadiq<span>.</span></a>
     <button class="menu" id="menuBtn" aria-label="Open navigation">☰</button>
     <nav aria-label="Primary navigation">
-      <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a>
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#tools">Tools</a>
       <a href="#education">Education</a><a href="#certifications">Certifications</a>
       <a href="#hobbies">Hobbies</a><a href="#contact">Contact</a>
     </nav>
@@ -288,50 +303,60 @@
       </div>
     </section>
 
-    <section id="skills">
-    <h2>Tools & Technologies</h2>
+    <section id="tools" class="reveal tools-section">
+       <div class="section-head">
+         <div>
+           <div class="section-kicker">06 — Technical Toolkit</div>
+           <h2>Tools & Technologies</h2>
+         </div>
+       </div>
+       <div class="tools-grid">
+         <article class="tool-card">
+           <span class="tool-number">01</span>
+           <div class="tool-icon">▦</div>
+           <h3>MS Excel</h3>
+           <p>Data analysis, formulas, dashboards, reporting and financial data management.</p>
+           <span class="tool-badge">Data & Reporting</span>
+         </article>
+         <article class="tool-card">
+           <span class="tool-number">02</span>
+           <div class="tool-icon">▥</div>
+           <h3>Power BI</h3>
+           <p>Interactive dashboards, data visualization, business intelligence and insights.</p>
+           <span class="tool-badge">Business Intelligence</span>
+         </article>
+         <article class="tool-card">
+           <span class="tool-number">03</span>
+           <div class="tool-icon">W</div>
+           <h3>MS Word</h3>
+           <p>Professional documentation, reports, formatting and business communication.</p>
+           <span class="tool-badge">Documentation</span>
+         </article>
+         <article class="tool-card">
+           <span class="tool-number">04</span>
+           <div class="tool-icon">P</div>
+           <h3>MS PowerPoint</h3>
+           <p>Professional presentations, visual storytelling and business reporting.</p>
+           <span class="tool-badge">Presentations</span>
+         </article>
+         <article class="tool-card">
+           <span class="tool-number">05</span>
+           <div class="tool-icon">&lt;/&gt;</div>
+           <h3>SQL</h3>
+           <p>Database queries, joins, aggregations, filtering and structured data analysis.</p>
+           <span class="tool-badge">Data Analysis</span>
+         </article>
+         <article class="tool-card">
+           <span class="tool-number">06</span>
+           <div class="tool-icon">Py</div>
+           <h3>Python</h3>
+           <p>Programming fundamentals, data analysis, automation and problem-solving.</p>
+           <span class="tool-badge">Programming</span>
+         </article>
+       </div>
+     </section>
 
-    <div class="skills-container">
-        <div class="skill-card">
-            <i class="fas fa-file-excel"></i>
-            <h3>MS Excel</h3>
-            <p>Data Analysis, Dashboards & Reporting</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fas fa-chart-bar"></i>
-            <h3>Power BI</h3>
-            <p>Data Visualization & Business Intelligence</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fas fa-file-word"></i>
-            <h3>MS Word</h3>
-            <p>Documentation & Professional Reports</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fas fa-file-powerpoint"></i>
-            <h3>MS PowerPoint</h3>
-            <p>Presentations & Business Communication</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fas fa-database"></i>
-            <h3>SQL</h3>
-            <p>Database Queries & Data Analysis</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fab fa-python"></i>
-            <h3>Python</h3>
-            <p>Data Analysis & Automation</p>
-        </div>
-    </div>
-</section>
-
-     
-    <section id="skills" class="reveal">
+     <section id="capabilities" class="reveal">
       <div class="section-head"><div><div class="section-kicker">06 — Capabilities</div><h2>What I work with</h2></div></div>
       <div class="grid grid3">
         <div class="card"><div class="icon">📋</div><div class="skill-title">Project Management</div><p class="muted">Planning, coordination, milestone tracking, resource allocation, stakeholder alignment and process improvement.</p></div>
